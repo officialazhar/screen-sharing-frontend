@@ -28,3 +28,33 @@
     <script src="app.js"></script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Sharing</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+</head>
+<body>
+
+    <!-- Login Page -->
+    <div id="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Enter Username">
+        <input type="password" id="password" placeholder="Enter Password">
+        <button id="login-btn">Login</button>
+    </div>
+
+    <!-- Screen Sharing Page (Hidden by Default) -->
+    <div id="app-container" style="display: none;">
+        <h1>Welcome to Screen Sharing</h1>
+        <button id="start-share">Start Sharing</button>
+        <button id="stop-share" style="display: none;">Stop Sharing</button>
+        <video id="screen-video" autoplay playsinline></video>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

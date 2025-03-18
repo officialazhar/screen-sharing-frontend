@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Sharing App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div id="login-container" class="box">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Enter ID">
+            <input type="password" id="password" placeholder="Enter Password">
+            <button onclick="login()">Login</button>
+        </div>
+
+        <div id="app-container" class="box" style="display: none;">
+            <h2>Welcome to Screen Sharing</h2>
+            <button id="start-share">Start Sharing</button>
+            <button id="stop-share" style="display: none;">Stop Sharing</button>
+            <video id="screen-video" autoplay></video>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

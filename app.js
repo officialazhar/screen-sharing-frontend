@@ -1,4 +1,4 @@
-const socket = io("http://localhost:5000"); // Backend ka address
+const socket = io("https://screen-sharing-backend.onrender.com"); // Render backend URL
 
 let localStream;
 

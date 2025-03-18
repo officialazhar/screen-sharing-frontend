@@ -1,18 +1,8 @@
-const socket = io("https://screen-sharing-backend.onrender.com"); // Render backend URL
+const socket = io("https://screen-sharing-backend.onrender.com/", {
+    transports: ["websocket", "polling"]
+}); // Backend URL
 
 let localStream;
-
-function login() {
-    let username = document.getElementById("username").value;
-    let password = document.getElementById("password").value;
-
-    if (username === "admin" && password === "1234") {
-        document.getElementById("login-container").style.display = "none";
-        document.getElementById("app-container").style.display = "flex";
-    } else {
-        alert("Invalid Credentials! Please try again.");
-    }
-}
 
 document.getElementById("start-share").addEventListener("click", async () => {
     try {
@@ -25,6 +15,7 @@ document.getElementById("start-share").addEventListener("click", async () => {
         document.getElementById("stop-share").style.display = "inline-block";
     } catch (error) {
         console.error("Error accessing screen sharing:", error);
+        alert("Screen sharing is not supported or permission denied.");
     }
 });
 
